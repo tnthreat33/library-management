@@ -10,6 +10,16 @@ class LibrariansController < ApplicationController
           render json: { errors: book.errors.full_messages }, status: :unprocessable_entity
         end
       end
+    
+      def remove_book
+        book = Book.find_by(id: params[:id])
+         if book.present?
+          book.destroy
+          render json: { message: "Book removed successfully!" }
+        else
+          render json: { error: "Book not found." }, status: :not_found
+        end
+      end
 
       private
     

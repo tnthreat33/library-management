@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :librarians, only: [] do
     collection do
       post 'add_book'
+      delete 'remove_book/:id', to: 'librarians#remove_book'
+      
+  
     end
   end
 
