@@ -1,5 +1,4 @@
 class LibrariansController < ApplicationController
-  skip_before_action :verify_authenticity_token
 
     def add_book
         book = Book.new(book_params)

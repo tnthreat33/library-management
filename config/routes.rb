@@ -12,4 +12,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users, only: [] do
+    collection do
+      post 'check_out_book'
+
+
 end
