@@ -72,3 +72,5 @@ group :test do
 end
 
 gem 'bundler', '2.2.26'
+
+gem 'faker', '~> 2.18', '>= 2.18.0'
