@@ -221,6 +221,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bundler (= 2.2.26)
   capybara
   debug
   importmap-rails
@@ -240,4 +241,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.4.13
+   2.2.26
