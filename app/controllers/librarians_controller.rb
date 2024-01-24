@@ -21,6 +21,12 @@ class LibrariansController < ApplicationController
         end
       end
 
+      def overdue_books
+        overdue_transactions = Transaction.where("due_date < ? AND transaction_type = ?", Date.today, Transaction.transaction_types[:check_out])
+        
+        render json: overdue_transactions
+      end
+
       private
     
       def book_params

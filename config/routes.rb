@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     collection do
       post 'add_book'
       delete 'remove_book/:id', to: 'librarians#remove_book'
+      get 'overdue_books'
       
-  
     end
   end
 
