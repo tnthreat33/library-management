@@ -3,5 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  
+  resources :librarians, only: [] do
+    collection do
+      post 'add_book'
+    end
+  end
+
 end
