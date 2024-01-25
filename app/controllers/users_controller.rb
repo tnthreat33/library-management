@@ -26,5 +26,21 @@ class UsersController < ApplicationController
         render json: { error: "User is not eligible to check out a book." }, status: :unprocessable_entity
       end
     end
+
+    def return_book
+    user = User.find(params[:userId])
+    transaction = user.transactions.find_by(id: params[:transaction_id])
+
+    if transaction.present?
+      transaction.update(transaction_type: Transaction.transaction_types[:return])
+
+      transaction.book.update(available_copies: transaction.book.available_copies + 1)
+
+      render json: { message: "Book returned successfully!" }
+    else
+      render json: { error: "Invalid transaction or book is not checked out by the user." }, status: :unprocessable_entity
+    end
+  end
+
   
 end
