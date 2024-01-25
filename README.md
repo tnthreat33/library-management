@@ -1,15 +1,21 @@
 # Coding Assignment
-This simple Rails application provides an API for managing a library's book inventory. It includes two main components: Librarian endpoints for book management and User endpoints for end-user actions.
+This simple Rails application provides an API for managing a library's book inventory. 
 
 ## LibrariansController
-Endpoint: POST /librarians/add_book
-Endpoint: DELETE /librarians/remove_book/:id
-Endpoint: GET /librarians/overdue_books
+    -Librarian creates new book
+        Endpoint: POST /librarians/add_book
+    -Librarian removes a book
+        Endpoint: DELETE /librarians/remove_book/:id
+    -Librarian sees all overdue books
+        Endpoint: GET /librarians/overdue_books
 
 ## UsersController
-Endpoint: POST /users/check_out_book
-Endpoint: POST /users/return_book
-Endpoint: GET /users/checked_out_books/:id
+    -User checks out a book
+        Endpoint: POST /users/check_out_book
+    -User returns a book
+        Endpoint: POST /users/return_book
+    -User see all their checked out books
+        Endpoint: GET /users/checked_out_books/:id
 
 ## Models
     -  Book
