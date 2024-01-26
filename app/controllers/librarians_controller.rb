@@ -1,14 +1,15 @@
 class LibrariansController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
     def add_book
-        book = Book.new(book_params)
-    
-        if book.save
-          render json: book, status: :created
-        else
-          render json: { errors: book.errors.full_messages }, status: :unprocessable_entity
-        end
+      book = Book.add_or_update_book(book_params)
+  
+      if book
+        render json: book, status: :created
+      else
+        render json: { error: 'Failed to add or update the book.' }, status: :unprocessable_entity
       end
+    end
     
       def remove_book
         book = Book.find_by(id: params[:id])
