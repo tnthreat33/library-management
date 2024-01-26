@@ -1,19 +1,21 @@
 # Coding Assignment
-This simple Rails application provides an API for managing a library's book inventory. 
+This is a simple Library Management System built with Ruby on Rails. It allows librarians to manage books, users to check out and return books, and provides information on overdue books.
 
-## LibrariansController
+## BooksController
     -Librarian creates new book
-        Endpoint: POST /librarians/add_book
+        Endpoint: POST /books
     -Librarian removes a book
-        Endpoint: DELETE /librarians/remove_book/:id
+        Endpoint: DELETE /books/:id
     -Librarian sees all overdue books
-        Endpoint: GET /librarians/overdue_books
+        Endpoint: GET /overdue_books
+        
+## TransactionsController
+    -User checks out a book
+        Endpoint: POST /transactions
+    -User returns a book
+        Endpoint: PUT /transactions/:id
 
 ## UsersController
-    -User checks out a book
-        Endpoint: POST /users/check_out_book
-    -User returns a book
-        Endpoint: POST /users/return_book
     -User see all their checked out books
         Endpoint: GET /users/checked_out_books/:id
 
