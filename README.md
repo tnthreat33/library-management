@@ -1,5 +1,5 @@
 # Coding Assignment
-This is a simple Library Management System built with Ruby on Rails. It allows librarians to manage books, users to check out and return books, and provides information on overdue books.
+This is a simple Library API built with Ruby on Rails. It allows librarians to manage books, users to check out and return books, and provides information on overdue books.
 
 ## BooksController
     -Librarian creates new book
@@ -8,7 +8,7 @@ This is a simple Library Management System built with Ruby on Rails. It allows l
         Endpoint: DELETE /books/:id
     -Librarian sees all overdue books
         Endpoint: GET /overdue_books
-        
+
 ## TransactionsController
     -User checks out a book
         Endpoint: POST /transactions
