@@ -6,10 +6,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :transactions, only: [:create, :update]
+
   resources :users, only: [] do
     collection do
-      post 'check_out_book'
-      post 'return_book'
       get 'checked_out_books/:id', to: 'users#checked_out_books'
     end
   end
