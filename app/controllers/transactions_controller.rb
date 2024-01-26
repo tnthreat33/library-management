@@ -12,7 +12,7 @@ class TransactionsController < ApplicationController
       transaction = Transaction.create(
         user: user,
         book: book,
-        transaction_type: Transaction.transaction_types[:check_out],
+        transaction_type: Transaction.transaction_types[:checked_out],
         transaction_date: Date.today,
         due_date: 2.weeks.from_now
       )

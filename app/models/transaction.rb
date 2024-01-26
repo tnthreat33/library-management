@@ -7,5 +7,5 @@ class Transaction < ApplicationRecord
   validates :due_date, presence: true
     
 
-  enum transaction_type: { check_out: 0, return: 1 }
+  enum transaction_type: { checked_out: 0, return: 1 }
 end
