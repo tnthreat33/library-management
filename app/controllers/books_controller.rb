@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-    skip_before_action :verify_authenticity_token
+    
     def create
         book = Book.add_or_update_book(book_params)
     
