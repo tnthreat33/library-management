@@ -4,14 +4,26 @@ This is a simple Library API built with Ruby on Rails. It allows librarians to m
 ## BooksController
     -Librarian creates new book
         Endpoint: POST /books
+        Params 
+            {"ISBN": "isbn number",
+             "title": "book title",
+              "author": "author book"
+            }
+
     -Librarian removes a book
         Endpoint: DELETE /books/:id
+
     -Librarian sees all overdue books
         Endpoint: GET /overdue_books
 
 ## TransactionsController
     -User checks out a book
         Endpoint: POST /transactions
+        Params 
+            {"user_id": "user id",
+             "book_id": "book id"
+            }
+            
     -User returns a book
         Endpoint: PUT /transactions/:id
 
