@@ -2,9 +2,9 @@
 This is a simple Library API built with Ruby on Rails. It allows librarians to manage books, users to check out and return books, and provides information on overdue books.
 
 ## BooksController
-    * Librarian creates new book
-        * Endpoint: POST /books
-        Params 
+    - **Librarian creates new book
+        -** Endpoint: POST /books
+        -**Params 
             {"ISBN": "isbn number",
              "title": "book title",
              "author": "author book"
