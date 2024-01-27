@@ -7,7 +7,7 @@ This is a simple Library API built with Ruby on Rails. It allows librarians to m
         Params 
             {"ISBN": "isbn number",
              "title": "book title",
-              "author": "author book"
+             "author": "author book"
             }
 
     -Librarian removes a book
@@ -23,7 +23,7 @@ This is a simple Library API built with Ruby on Rails. It allows librarians to m
             {"user_id": "user id",
              "book_id": "book id"
             }
-            
+
     -User returns a book
         Endpoint: PUT /transactions/:id
 
