@@ -6,6 +6,7 @@ class Book < ApplicationRecord
     validates :author, presence: true
 
     def self.add_or_update_book(book_params)
+      #Add copy to existing book if same ISBN or create a new book 
         existing_book = find_by(ISBN: book_params[:ISBN])
     
         if existing_book

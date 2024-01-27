@@ -16,7 +16,7 @@ class BooksController < ApplicationController
     
       if book.present?
         if book.total_copies > 1
-          # If there is more than 1 copy, decrement total_copies by 1
+          # If there is more than 1 copy, decrease total_copies by 1
           book.update(total_copies: book.total_copies - 1, available_copies: book.available_copies - 1)
           render json: { message: "Copy of Book removed successfully!", book: book  }
         else
